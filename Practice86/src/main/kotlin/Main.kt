@@ -52,6 +52,7 @@ open class CreditCard(private val creditLimit: Double) : BankCard() {
     override fun topUp(amount: Double) {
         if (amount > 0) {
             // Сначала погашаем кредитные средства
+
             val remainingCredit = creditLimit - creditFunds
             if (remainingCredit > 0) {
                 if (amount <= remainingCredit) {
